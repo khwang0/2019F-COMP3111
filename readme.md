@@ -22,7 +22,7 @@ You are advised to read this document carefully and ask your question on Piazza 
 
 The task specifies what should be done but there are still a lot of details unspecified. We deliberately not specify those details in the implementation and allow students to fill the missing gaps. However, to make sure the game would make sense and meet our expectation, we define a set of game physics that your team must follow. If your team fail to follow those physics marks will be deducted. At any time if you and your teamate wish to clarify with a particular task requirement, you should ask on Piazza. TAs who responsible for grading will only read the clarification written on Piazza.
 
-About group formation, you are allowed to team up with students enrolled in different sessions. However H class students can only team up with H-class students (L1 or L2).  
+About group formation, you are allowed to team up with students enrolled in different sessions. **However H class students can only team up with H-class students (L1 or L2).**  
 
 Apart from the implementation of the tasks, there are some other requirements on the project such as documentation, testing, design patterns. They will be stated after the task specification.
 
@@ -62,9 +62,9 @@ Noted that the some tasks are in a hierarchy structure. No point will be awarded
  * Each grid can contain any number of monsters as long as it does not contain a tower.
  * The game is a time-based game. The button `Next Frame` would NOT be tested in grading. It will be served as a debug button for your own interest. There are two methods to start the game: by clicking `Simulate` or `Play`. In either mode monsters will be automatically generated and the monsters will move towards the end-zone, towers will automatically fire if any monsters are in its shooting distance. In `simulate` mode, player is only allowed to build tower before the simulate button is clicked. Once the button is clicked, the player will no be clicking any button until the game is over. In `play` mode, the player is allowed to build or to upgrade tower when the game is running.
  
-### Tasks (16 points)
+### Tasks (16 points of project Total)
  
-#### Regular Task - applies to both 3111 and 3111H students
+#### Regular Individual-Task - applies to both 3111 and 3111H students
 1. Arena Building (15)
     1. Indicate the grid that a monster show up and the grid representing end-zone with png images. 
     The image must shall be shown at the back when there is a monster on the grid. Create/choose your own image. (1)
@@ -148,7 +148,7 @@ Noted that the some tasks are in a hierarchy structure. No point will be awarded
 	1. Use Java Persistence API or Hibernate Framework to connect to a small database that stores your game data (attributes of Towers/Monsters); (2.5%)
 	1. Use Java spring framework that allows the game be played in different machines while a server records the top 10 highest scores; (2.5%) 
 
-
+* Note: no implementation group task for comp3111 student.
  ---
  
  ## Technical Requirement
