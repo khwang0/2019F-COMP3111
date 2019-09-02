@@ -1,0 +1,59 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+}
+javafx {
+    version = "12.0.1"
+    modules = ['javafx.controls','javafx.fxml' ]
+}
+sourceCompatibility = '1.10'
+targetCompatibility = '1.10'
+
+jar {
+    baseName = 'courseScraper'
+    version =  '0.1.0'
+    destinationDir = file("/")
+    manifest {
+        attributes 'Implementation-Title': baseName,
+                'Implementation-Version': version,
+                'Main-Class': 'sample.Main'
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+mainClassName = 'sample.Main'
+
+repositories {
+    mavenCentral()
+}
+
+task debug(type:JavaExec) {
+    group 'application'
+    description 'debug'
+    jvmArgs '-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=9099'
+    main = 'comp3111.coursescraper.MyApplication'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/net.sourceforge.htmlunit/htmlunit
+    compile group: 'net.sourceforge.htmlunit', name: 'htmlunit', version: '2.31'
+
+    // https://mvnrepository.com/artifact/junit/junit
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // testFX - https://github.com/TestFX/TestFX
+    testCompile  group: 'org.testfx', name: 'testfx-junit', version : '4.0.15-alpha'
+
+
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHTML")
+    }
+}
