@@ -3,6 +3,9 @@ Created by: Dr. Kevin Wang (kevinw@cse.ust.hk)
 
 ## Project Problem Statement and Activities
  
+ ### [Project Sign Up](https://docs.google.com/spreadsheets/d/1fGQYkAsdawLWlxSNlFxJr192ZFOIowbVIUD1EoVWuYc/edit#gid=0)
+ 
+ 
  > **Activity 1 Due (2%): 14-10-2019 (Wk 7 Mon) 20:00**
  > Submission details will be provided on Canvas
  >
