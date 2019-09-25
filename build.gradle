@@ -1,18 +1,24 @@
 plugins {
-    id 'java'
-    id 'jacoco'
-    id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.7'
+	id 'java'
+	id 'jacoco'
+	id 'application'
+	id 'org.openjfx.javafxplugin' version '0.0.7' apply false
 }
-javafx {
-    version = "12.0.1"
-    modules = ['javafx.controls','javafx.fxml' ]
-}
-sourceCompatibility = '1.10'
-targetCompatibility = '1.10'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+
+if (JavaVersion.current() != project.targetCompatibility) {
+    apply plugin: 'org.openjfx.javafxplugin'
+    javafx {
+    	version = "12.0.1"
+	modules = ['javafx.controls','javafx.fxml' ]
+    }
+} 
 
 jar {
-    baseName = 'courseScraper'
+    baseName = 'towerDefence'
     version =  '0.1.0'
     destinationDir = file("/")
     manifest {
@@ -33,7 +39,7 @@ task debug(type:JavaExec) {
     group 'application'
     description 'debug'
     jvmArgs '-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=9099'
-    main = 'comp3111.coursescraper.MyApplication'
+    main = 'sample.Main'
     classpath = sourceSets.main.runtimeClasspath
 }
 
@@ -46,7 +52,6 @@ dependencies {
 
     // testFX - https://github.com/TestFX/TestFX
     testCompile  group: 'org.testfx', name: 'testfx-junit', version : '4.0.15-alpha'
-
 
 }
 
