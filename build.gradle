@@ -3,6 +3,7 @@ plugins {
 	id 'jacoco'
 	id 'application'
 	id 'org.openjfx.javafxplugin' version '0.0.7' apply false
+	id 'eclipse'
 }
 
 sourceCompatibility = '1.8'
