@@ -1,7 +1,10 @@
 build/
 build/**
+bin/
+bin/**
 *.class
 .gradle/
+.eclipse/
 .idea/
 .settings/
 out/
