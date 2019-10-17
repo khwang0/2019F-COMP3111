@@ -21,7 +21,7 @@ if (JavaVersion.current() != project.targetCompatibility) {
 jar {
     baseName = 'towerDefence'
     version =  '0.1.0'
-    destinationDir = file("/")
+    destinationDir = file("./")
     manifest {
         attributes 'Implementation-Title': baseName,
                 'Implementation-Version': version,
