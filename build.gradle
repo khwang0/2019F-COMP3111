@@ -6,11 +6,13 @@ plugins {
 	id 'eclipse'
 }
 
+
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
-
-if (JavaVersion.current() != project.targetCompatibility) {
+if (JavaVersion.current() > org.gradle.api.JavaVersion.VERSION_1_10) {
+    println('Current JavaVersion: "' + JavaVersion.current() + '"');
+    println('Apply org.penjfx.javafxplugin');
     apply plugin: 'org.openjfx.javafxplugin'
     javafx {
     	version = "12.0.1"
@@ -62,4 +64,8 @@ jacocoTestReport {
         csv.enabled false
         html.destination file("${buildDir}/jacocoHTML")
     }
+}
+
+jacoco {
+    toolVersion = "0.8.2"
 }
