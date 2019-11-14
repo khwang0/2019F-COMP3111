@@ -9,8 +9,8 @@ Created by: Dr. Kevin Wang (kevinw@cse.ust.hk)
  > **Activity 1 Due (2%): ~~14-10-2019 (Wk 7 Mon)~~ 21-10-2019 (Wk 8 Mon) 20:00**
  > Submission details will be provided on Canvas
  >
- > **Activity 2 Due (28%): 17-11-2019 (Wk 12 Mon)**
- > Submission details will be provided at Canvas - (Design Pattern and Java Doc will be due on 20-11-2019)
+ > **Activity 2 Due (28%): ~~17-11-2019 (Wk 12 Mon)~~ 29-11-2019 20:00 pm **
+ > Submission details will be provided at Canvas - (Design Pattern and Java Doc will be due on ~~20-11-2019~~ 2-12-2019 20:00pm)
  
  ## Import Updates
  
